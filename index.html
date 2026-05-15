@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Sudoku diario</h1>
+
+<ul>
+  <li><a id="puzzle">🧩 Ver puzzle</a></li>
+  <li><a id="solucion">✅ Ver solución</a></li>
+</ul>
+
+<script>
+const ts = new Date().getTime();
+
+document.getElementById("puzzle").href =
+  "nuevo-sudoku.html?v=" + ts;
+
+document.getElementById("solucion").href =
+  "nuevo-sudoku-solucion.html?v=" + ts;
+
+</script>
+
+</body>
+</html>
