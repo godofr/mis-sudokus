@@ -1,15 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    font-family: sans-serif;
+}
+
+.container {
+    text-align: center;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background-color: white;
+    padding: 20px;
+}
+
+a {
+    display: block;
+    margin: 10px 0;
+    font-size: 20px;
+    text-decoration: none;
+}
+</style>
+</head>
+
 <body>
-<h1>Sudoku diario</h1>
-<ul>
-  <li><a id="puzzle">🧩 Ver puzzle</a></li>
-  <li><a id="solucion">✅ Ver solución</a></li>
-</ul>
+
+<div class="container">
+    <h1>Sudoku diario</h1>
+
+    <a id="puzzle">🧩 Ver puzzle</a>
+    <a id="solucion">✅ Ver solución</a>
+</div>
+
 <script>
 const ts = new Date().getTime();
-document.getElementById("puzzle").href = "nuevo-sudoku.html?v=" + ts;
-document.getElementById("solucion").href = "nuevo-sudoku-solucion.html?v=" + ts;
+document.getElementById("puzzle").href =
+  "nuevo-sudoku.html?v=" + ts;
+document.getElementById("solucion").href =
+  "nuevo-sudoku-solucion.html?v=" + ts;
 </script>
+
 </body>
 </html>
