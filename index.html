@@ -34,6 +34,11 @@ a {
     font-size: 20px;
     text-decoration: none;
 }
+
+h2 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
 </style>
 </head>
 
@@ -42,16 +47,36 @@ a {
 <div class="container">
     <h1>Sudoku diario</h1>
 
-    <a id="puzzle">🧩 Ver puzzle</a>
-    <a id="solucion">✅ Ver solución</a>
+    <h2>🟢 Fácil</h2>
+    <a id="facil">🧩 Ver sudoku</a>
+    <a id="facil_solucion">✅ Ver solución</a>
+
+    <h2>🟡 Intermedio</h2>
+    <a id="intermedio">🧩 Ver sudoku</a>
+    <a id="intermedio_solucion">✅ Ver solución</a>
+
+    <h2>🔴 Experto</h2>
+    <a id="experto">🧩 Ver sudoku</a>
+    <a id="experto_solucion">✅ Ver solución</a>
 </div>
 
 <script>
 const ts = new Date().getTime();
-document.getElementById("puzzle").href =
-  "nuevo-sudoku.html?v=" + ts;
-document.getElementById("solucion").href =
-  "nuevo-sudoku-solucion.html?v=" + ts;
+
+document.getElementById("facil").href =
+  "sudoku-facil.html?v=" + ts;
+document.getElementById("facil_solucion").href =
+  "sudoku-facil-solucion.html?v=" + ts;
+
+document.getElementById("intermedio").href =
+  "sudoku-intermedio.html?v=" + ts;
+document.getElementById("intermedio_solucion").href =
+  "sudoku-intermedio-solucion.html?v=" + ts;
+
+document.getElementById("experto").href =
+  "sudoku-experto.html?v=" + ts;
+document.getElementById("experto_solucion").href =
+  "sudoku-experto-solucion.html?v=" + ts;
 </script>
 
 </body>
